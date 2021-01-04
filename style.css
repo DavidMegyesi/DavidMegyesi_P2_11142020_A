@@ -58,7 +58,7 @@ body {
 .input-group {
   display: inline-block;
 }
-button i {
+.icon {
   display: flex;
   color: #0065fc;
   width: 50px;
@@ -98,7 +98,12 @@ button i {
   text-decoration: none;
   -webkit-font-smoothing: antialiased;
 }
-
+.filters-border {
+  display: inline-block;
+}
+.romantic-button {
+  display: inline-block;
+}
 .filter-type {
   display: inline-block;
   padding-left: 10px;
@@ -138,7 +143,7 @@ button i {
   margin: -4.5px;
 }
 .submit {
-  width: 5%;
+  width: 80px;
   height: 100%;
   background: #0065fc;
   text-align: center;
@@ -223,7 +228,7 @@ button i {
 .accomodation-side-div {
   float: right;
   margin-top: 0px;
-  margin-right: 20px;
+  margin-right: 0px;
   width: 420px;
   background: #f2f2f2;
   border-radius: 20px;
@@ -502,56 +507,154 @@ button i {
 .search-icon-button {
   width: 48px;
   height: 48px;
-  padding-bottom: 17px;
   border-radius: 13px;
-  background-color: white;
+  background-color: #0065fc;
+  border: none;
 }
 .search-icon {
   position: relative;
   display: inline-block;
-  margin-right: 20px;
-  color: red;
+  margin-right: 2px;
+  color: white;
+  font-size: 18px;
 }
+.trial {
+  display: inline;
+}
+
 /* media query */
-
-/* nav */
 /* desktop */
-@media screen and (max-width: 1024px) {
+
+@media screen and (min-width: 1024px) {
+  .search-icon-button {
+    display: none;
+  }
+  .search-icon {
+    display: none;
+  }
+  .activities-container {
+    width: 100%;
+  }
+
+  .footer-container {
+    width: 100%;
+  }
+}
+/* Tablet view */
+@media screen and (max-width: 768px) {
+  .accomodations-div {
+    display: inline-block;
+    width: 90%;
+    height: 78%;
+    margin-top: 30px;
+  }
+  .search-icon-button {
+    display: inline;
+    margin-left: -10px;
+  }
+  .filters {
+    margin-top: 20px;
+  }
+  .input-group {
+    margin-top: 10px;
+  }
+  .accomodation-side-div {
+    float: right;
+    margin-top: 0px;
+    width: 90%;
+    background: #f2f2f2;
+    border-radius: 20px;
+    height: 600px;
+    align-items: center;
+    margin-right: 50px;
+  }
+  .flexbox-container {
+    display: flex;
+    flex-direction: row;
+  }
+  .submit {
+    display: none;
+  }
+  .activities-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about-section {
+    padding-right: 20px;
+  }
+  .our-accomodations {
+    padding-right: 20px;
+  }
+  .footer-container {
+    width: 100%;
+    height: 50%;
+  }
 }
 
-@media screen and (max-width: 479px) {
+/* Iphone 8 display */
+@media screen and (max-width: 480px) {
   .nav-seperate a:hover {
     border-top: none;
     padding-bottom: 7px;
     color: #0065fc;
     border-bottom: 4px solid #0065fc;
   }
+  .information i {
+    margin-left: 10px;
+  }
+  .trial {
+    margin-left: 50px;
+  }
   .nav-seperate {
     margin-top: -30px;
-    margin-right: 0px;
+    margin-right: 30px;
     align-items: center;
-    padding: 0px 20px 0px 20px;
-    position: unset;
-    display: flex;
+    padding: 0px 0px 0px 0px;
     border-bottom: 3px solid #f2f2f2;
+  }
+  .topnav {
+    float: right;
+  }
+  .input-group {
+    padding: 5px;
   }
   .signupdiv {
     position: absolute;
-    right: 40px;
+    right: 0px;
     top: 0px;
   }
   .findaplace {
-    font-size: 15px;
+    font-size: 16px;
     margin-top: 100px;
+  }
+  .info {
+    display: inline;
+  }
+  .city {
+    display: inline-block;
+    margin-left: 0px;
+  }
+  .info-icon {
+    display: block;
+  }
+  .makespace {
+    padding: 0px;
   }
 
   /* accomodations */
-  .accomodations-side-div {
-    display: inline;
+  .accomodation-side-div {
+    margin-bottom: 30px;
+    margin-top: 10px;
+    border-radius: 0px;
+    width: 100%;
+  }
+  .aside-pictures-flex {
+    margin-left: 10px;
   }
   .accomodations-div {
     display: inline;
     background: white;
+    padding: 0%;
   }
   .pictures-div {
     box-shadow: 0px 5px 5px 0px #f2f2f2;
@@ -559,8 +662,52 @@ button i {
   .flexbox-container {
     display: inline;
   }
+  /* Activities */
   .activities-container {
     display: inline;
+    justify-content: space-around;
+  }
+  .activites-text {
+    padding: 0px 0px 10px 10px;
+  }
+  .frioul-border {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .national-park-border {
+    margin-bottom: 20px;
+  }
+  .notre-dame-image {
+    width: 310px;
+  }
+  .notre-dame-border {
+    width: 312px;
+  }
+  .longchamp-border {
+    width: 312px;
+    margin-top: 20px;
+  }
+  .longchamp-image {
+    width: 310px;
+  }
+  .image-hotels {
+    width: 100%;
+  }
+  .show-more {
+    font-style: bold;
+  }
+  .filters {
+    display: block;
+  }
+  .input-group {
+    justify-content: space-between;
+  }
+  .pictures-div {
+    width: 100%;
+    margin-left: 0px;
+  }
+  .old-port-border {
+    margin-bottom: 20px;
   }
   /* searchbar */
   .submit {
@@ -575,9 +722,18 @@ button i {
   .submit {
     display: none;
   }
-}
-@media screen and (min-width: 1024px) {
   .search-icon-button {
-    display: none;
+    display: inline;
+    margin-left: -10px;
+  }
+  .show-more {
+    padding-bottom: 30px;
+  }
+
+  /* footer */
+  .footer-container {
+    display: inline;
+    height: 70%;
+    width: 100%;
   }
 }
