@@ -644,12 +644,14 @@ body {
   /* accomodations */
   .accomodation-side-div {
     margin-bottom: 30px;
+    margin-right: 0px;
     margin-top: 10px;
     border-radius: 0px;
     width: 100%;
   }
   .aside-pictures-flex {
-    margin-left: 10px;
+    margin-left: 0px;
+    width: 100%;
   }
   .accomodations-div {
     display: inline;
